@@ -1,0 +1,16 @@
+<Page
+    x:Class="YourNamespace.DetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:YourNamespace">
+
+    <ScrollViewer>
+        <StackPanel Margin="20">
+            <Image Source="{x:Bind Film.PosterUrlPreview}" Width="200" Height="300"/>
+            <TextBlock Text="{x:Bind Film.NameRu}" FontSize="24" FontWeight="Bold" Margin="0,10,0,0"/>
+            <TextBlock Text="{x:Bind Film.Year}" FontStyle="Italic"/>
+            <TextBlock Text="{x:Bind Film.Description}" TextWrapping="WrapWholeWords" Margin="0,10,0,0"/>
+            <Button Content="Добавить в избранное" Click="AddToFavorites_Click" Margin="0,10,0,0"/>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
